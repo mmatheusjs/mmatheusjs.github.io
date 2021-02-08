@@ -17,7 +17,7 @@ xhr.onreadystatechange = function (){
                 <div class="btn_div">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="openrepos('${dadosJSONObj[i].svn_url}')">Link</button>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="clone('git clone ${dadosJSONObj[i].html_url}')">Clone</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="${dadosJSONObj[i].name}' onclick="info(this)" >Sobre</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="${dadosJSONObj[i].name}' onclick="info(this)">Detalhes</button>
                 </div>        
             </div>`
         }
