@@ -1,14 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'PT Sans', sans-serif;
 }
 
-body{
-    /* width: 100%;
-    height: 100%; */
-    
-
-}
 
 header {
     height: 10%;
@@ -66,10 +63,6 @@ header {
     justify-content: center;
     padding: 30px;
     background-color: #f9bf8f;
-    /* background-image: url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
-    background-repeat:no-repeat;
-    background-size:cover; */
-    
 }
 
 .repos {
@@ -81,7 +74,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-color: #fee9d7;
+    background-color: #ffffff;
     box-shadow: 0px 0px 2px #34222e; 
     transition: 0.2s linear ;
        
@@ -98,7 +91,7 @@ header {
     font-size: 20px;
     font-weight: 500;
     font-style:oblique;
-    color: rgb(34, 55, 75);
+    color: #34222e;
     text-shadow: 1.5px 1.5px 5px lightblue;
     
 }
@@ -116,24 +109,26 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 button:nth-child(1), button:nth-child(2), button:nth-child(3){
     margin: 10px;
-    background-color: #34222e;
-    color:#f9bf8f;
-    font-weight: 700;
+    background-color: #34222e !important;
+    color:#f9bf8f !important;
+    font-weight: 600;
     font-size: 12px;
-    transition: 0.3s;
+    transition: 0.3s ;
+    text-decoration: none;
 }
 
 button:nth-child(1):hover, button:nth-child(2):hover, button:nth-child(3):hover{
-    background-color: #f9bf8f;
-    color:#34222e;
-    border: 0.5px solid #34222e;
+    background-color: #f9bf8f !important;
+    color:#34222e !important;
+    border: 0.5px solid #34222e !important;
     outline: none;
 }
 
 button:nth-child(1):active, button:nth-child(2):active, button:nth-child(3):active {
-    transform: scale(1.02);
+    transform: scale(1.03) !important;
 }
