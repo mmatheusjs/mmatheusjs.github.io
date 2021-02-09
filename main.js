@@ -8,6 +8,7 @@ xhr.onreadystatechange = function (){
     if(this.readyState == 4 && this.status == 200) {
         let dadosJSONText = xhr.responseText;
         let dadosJSONObj = JSON.parse(dadosJSONText);
+        console.log(dadosJSONObj)
         for (let i = 0; i < dadosJSONObj.length; i++) {
             corpo.innerHTML +=
             `<div class="repos">
@@ -17,7 +18,7 @@ xhr.onreadystatechange = function (){
                 <div class="btn_div">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="openrepos('${dadosJSONObj[i].svn_url}')">Link</button>
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="clone('git clone ${dadosJSONObj[i].html_url}')">Clone</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="${dadosJSONObj[i].name}' onclick="info(this)">Detalhes</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="${dadosJSONObj[i].name}" onclick="info(this)">Detalhes</button>
                 </div>        
             </div>`
         }
@@ -41,12 +42,6 @@ function clone(url){
 }
 
 function info(sobre){
-    let arr = [];
-
-    arr.push({nome: sobre.id});
-    let arrJson = JSON.stringify(arr);
-
-    localStorage.repositorio = arrJson;
-
-    window.location.href = "info.html"
+    localStorage.repositorio = sobre.id;
+    window.location.href = "./detalhes/info.html"
 }
