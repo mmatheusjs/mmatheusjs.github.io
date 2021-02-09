@@ -39,15 +39,22 @@ header {
     color: #f9bf8f;
     font-size: 20px;
     transition: 0.25s;
+    position: relative;
 }
 
-.nav-link:hover{
+.nav-link::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #f9bf8f;
+    position: absolute;
+    left: 0;
+    bottom: -4px; 
+}
+.nav-link:hover::after{
     transform: scale(1.05);
-}
-
-.nav-link:active{
-    text-shadow: 0px 0px 2px rgb(34, 30, 14);
-    
+    width: 100%;
+    transition: width 0.55s ease-in-out;
 }
 
 .icon-matheus{
